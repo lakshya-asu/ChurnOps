@@ -92,20 +92,19 @@ Data Preparation
 ### Usage
 #### Model Training
 Train the churn prediction model and log the experiment with MLflow:
-    ```bash
-        python src/train.py
+    python src/train.py
 
 
 The API provides:
 - POST /predict: Accepts a JSON payload with a "features" key containing the input data.
 - GET /health: Returns a health check status.
+
 #### Containerization with Docker
     1. Build the Docker Image:
-        ```bash
-            docker build -t churnops:latest .
+        docker build -t churnops:latest .
+
     2. Run the Docker Container:
-        ```bash
-           docker run -p 5000:5000 churnops:latest
+        docker run -p 5000:5000 churnops:latest
  
 The API will be accessible at `http://localhost:5000`.
 
